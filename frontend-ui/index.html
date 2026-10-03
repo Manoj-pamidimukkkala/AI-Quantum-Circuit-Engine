@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JARVIS Quantum HUD</title>
+    <style>
+        body { background: #050b14; color: #00f0ff; font-family: 'Courier New', monospace; padding: 20px; }
+        .hud-panel { border: 1px solid #00f0ff; padding: 20px; background: rgba(0,240,255,0.05); box-shadow: 0 0 15px rgba(0,240,255,0.2); }
+        .terminal { background: #020509; border: 1px solid #005577; padding: 15px; height: 300px; overflow-y: auto; color: #7df9ff; font-size: 13px; }
+        button { background: #00f0ff; color: #000; border: none; padding: 10px 20px; font-weight: bold; cursor: pointer; }
+        button:hover { background: #7df9ff; box-shadow: 0 0 10px #00f0ff; }
+    </style>
+</head>
+<body>
+    <div class="hud-panel">
+        <h2>JARVIS SYSTEM HUD // POLYGLOT CORE</h2>
+        <p>Status: <span style="color:#00ff88">ONLINE</span> | Microservices: Java (8080) / Python (8000)</p>
+        
+        <button onclick="runQuantumSimulation()">Execute Quantum Superposition Circuit</button>
+        
+        <h3>Terminal Output</h3>
+        <pre class="terminal" id="consoleOutput">> System initialized. Awaiting voice/quantum payload command...</pre>
+    </div>
+
+    <script>
+        async function runQuantumSimulation() {
+            const consoleEl = document.getElementById('consoleOutput');
+            consoleEl.innerText += "\n> Initiating request to Python Quantum Microservice...";
+            
+            try {
+                const res = await fetch('http://localhost:8000/api/v1/quantum/simulate', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ command: "Superposition Search", num_qubits: 4 })
+                });
+                const data = await res.json();
+                consoleEl.innerText += "\n> QUANTUM CIRCUIT DIAGRAM:\n" + data.circuit_diagram;
+                consoleEl.innerText += "\n> MEASUREMENT COUNTS:\n" + JSON.stringify(data.measurement_counts, null, 2);
+            } catch (err) {
+                consoleEl.innerText += "\n[ERROR] Unable to communicate with Quantum Engine.";
+            }
+        }
+    </script>
+</body>
+</html>
