@@ -1,8 +1,7 @@
-```markdown
 # AI-Quantum-Circuit-Engine
 
 <p align="center">
-  <b>High-Performance Hybrid Systems Architecture for AI, Audio Signal Processing, & Quantum Simulation</b>
+  <b>High-Performance Hybrid Architecture for AI, Audio Signal Processing, & Quantum Simulation</b>
 </p>
 
 <p align="center">
@@ -16,120 +15,24 @@
 
 ---
 
-## ⚡ Research Intent & Purpose
+## What is this Project?
 
-**AI-Quantum-Circuit-Engine** is an experimental multi-tier research framework built to explore the integration of **heterogeneous systems programming**, **real-time audio/signal telemetry ingestion**, and **hybrid quantum-classical execution loops**. 
-
-Traditional machine learning pipelines and quantum simulation algorithms often operate in isolated software stacks. This repository investigates how low-latency systems infrastructure (**C++20**) can seamlessly interface with robust enterprise coordination layers (**Java**) and flexible algorithmic reasoning engines (**Python / Qiskit**) to support:
-* **Hybrid Quantum Circuit Simulations:** Benchmarking variational algorithms and gate-level operations under simulated quantum noise profiles.
-* **Real-Time Signal Orchestration:** Processing high-frequency input streams through low-overhead native memory pipelines.
-* **Cognitive Agent Integration:** Bridging natural language parsing instructions with deterministic low-level system actions.
+**AI-Quantum-Circuit-Engine** is a multi-tier, heterogeneous research framework that combines three distinct computing disciplines into one integrated pipeline:
+1. **Low-Latency Signal Ingestion:** High-throughput audio and telemetry buffer processing built in modern C++20.
+2. **Enterprise Orchestration:** Asynchronous task dispatching, lifecycle management, and thread concurrency handled via Java.
+3. **AI & Quantum Intelligence:** A FastAPI Python service running natural language understanding routines, prompt evaluation pipelines, and quantum circuit simulations with Qiskit.
 
 ---
 
-## 🏗️ System Architecture
+## Why Does It Exist? (Research Intent)
 
-The repository is structured into distinct, decoupled modular tiers communicating via structured relational persistence and RESTful endpoints:
+In modern computing, **quantum computing frameworks** and **Generative AI workflows** are heavily anchored in Python for rapid prototyping. However, Python runtimes face performance bottlenecks when directly ingesting continuous, high-frequency physical telemetry or audio data. Conversely, low-level languages like **C++** offer microsecond-level execution but lack mature LLM or quantum algorithm libraries.
 
-
-```
-
-┌────────────────────────┐       ┌────────────────────────┐       ┌────────────────────────┐
-│   C++20 Signal Core    │       │ Java Enterprise Engine │       │ Python AI & Quantum    │
-│  (audio_processor.cpp) │ <---> │ (SystemOrchestrator)   │ <---> │ Backend (FastAPI/Qiskit)│
-└────────────────────────┘       └────────────────────────┘       └────────────────────────┘
-▲                                                                 ▲
-└─────────────────────── [ State Persistence ] ───────────────────┘
-(schema.sql & frontend-ui/)
-
-```
-
-1. **Native Ingestion Core (`audio_processor.cpp`):** Handles high-frequency signal processing and low-latency buffer management using modern C++20 features.
-2. **Enterprise Task Coordinator (`SystemOrchestrator.java`):** Manages job dispatching, concurrency states, and lifecycle rules across distributed sub-components.
-3. **Intelligence & Quantum Layer (`engine.py`):** Powered by FastAPI, this component drives natural language processing routines, prompt evaluation flows, and Qiskit-based quantum circuit execution.
-4. **Persistence & HUD (`schema.sql`, `frontend-ui/`):** Relational state schema coupled with a lightweight web dashboard for real-time execution monitoring.
+This repository explores a hybrid model to address that divide:
+* **Heterogeneous Runtimes:** Coordinating native system memory management (C++) with enterprise dispatch reliability (Java) and high-level algorithmic intelligence (Python).
+* **Deterministic Real-Time AI Control:** Translating continuous signal ingestion into parameters suitable for agentic evaluation and circuit simulations without dropping frames.
+* **Quantum Simulation Under Noise:** Simulating quantum state transitions and evaluating variational gate fidelities based on live system telemetry inputs.
 
 ---
 
-## 🚀 Getting Started & Usage Guide
-
-### Prerequisites
-Ensure your environment has the following runtimes and tools installed:
-* **C++ Compiler:** Supporting C++20 (GCC 11+, Clang 13+, or MSVC 2022)
-* **Java SDK:** OpenJDK 17 or higher
-* **Python:** Version 3.11+ with `pip`
-* **Build Tools:** CMake, Make, and Docker
-
-### 1. Installation & Setup
-Clone the repository and initialize your workspace:
-```bash
-git clone [https://github.com/Manoj-pamidimukkkala/AI-Quantum-Circuit-Engine.git](https://github.com/Manoj-pamidimukkkala/AI-Quantum-Circuit-Engine.git)
-cd AI-Quantum-Circuit-Engine
-
-```
-
-### 2. Running Individual Modules
-
-#### Python AI & Quantum Backend
-
-Navigate to the Python environment and install dependencies:
-
-```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-pip install -r requirements.txt
-uvicorn engine:app --reload --port 8000
-
-```
-
-#### C++ Signal Processor Compilation
-
-Compile the high-performance native component:
-
-```bash
-mkdir build && cd build
-cmake -DCMAKE_BUILD_TYPE=Release ..
-make
-
-```
-
-#### Java Enterprise Orchestrator
-
-Build and run the Java task coordinator:
-
-```bash
-javac SystemOrchestrator.java
-java SystemOrchestrator
-
-```
-
-### 3. Containerized Deployment
-
-To spin up the multi-tier environment using Docker:
-
-```bash
-docker-compose up --build
-
-```
-
----
-
-## 🛠️ Technology Stack
-
-| Component | Technologies & Frameworks |
-| --- | --- |
-| **Native Systems** | C++20, CMake, Eigen, Lock-free Buffers |
-| **Enterprise Core** | Java 17+, Spring Boot / Native Concurrency |
-| **AI & Quantum** | Python, FastAPI, Qiskit, PyTorch, LangChain, DSPy |
-| **Database & UI** | PostgreSQL / SQLite (`schema.sql`), HTML5, CSS3, JavaScript |
-| **DevOps** | Docker, Git, Linux Automation Scripts |
-
----
-
-## 📄 License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
-```
-
-```
+## System Architecture
