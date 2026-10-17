@@ -1,83 +1,135 @@
-# Manoj PVS
+```markdown
+# AI-Quantum-Circuit-Engine
 
 <p align="center">
-  <b>AI Research & Hybrid Quantum Systems Engineer</b>
+  <b>High-Performance Hybrid Systems Architecture for AI, Audio Signal Processing, & Quantum Simulation</b>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3.11+-3776AB?logo=python" alt="Python" />
   <img src="https://img.shields.io/badge/C++-20/23-00599C?logo=c%2B%2B" alt="C++" />
   <img src="https://img.shields.io/badge/Java-17+-ED8B00?logo=openjdk" alt="Java" />
-  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?logo=pytorch&logoColor=white" alt="PyTorch" />
-  <img src="https://img.shields.io/badge/Qiskit-6F2DBF?logo=qiskit&logoColor=white" alt="Qiskit" />
+  <img src="https://img.shields.io/badge/Python-3.11+-3776AB?logo=python" alt="Python" />
   <img src="https://img.shields.io/badge/FastAPI-009688?logo=fastapi" alt="FastAPI" />
+  <img src="https://img.shields.io/badge/Qiskit-6F2DBF?logo=qiskit&logoColor=white" alt="Qiskit" />
   <img src="https://img.shields.io/badge/Docker-2496ED?logo=docker" alt="Docker" />
 </p>
 
 ---
 
-### ⚡ Research Profile
-Undergraduate researcher and systems engineer specializing in **Generative AI architecture**, **prompt engineering frameworks**, and **hybrid quantum-classical optimization**. Focused on bridging theoretical algorithmic models with high-performance C++, Java, and Python execution environments for complex decision systems, real-time signal processing, and scientific computing.
+## ⚡ Research Intent & Purpose
+
+**AI-Quantum-Circuit-Engine** is an experimental multi-tier research framework built to explore the integration of **heterogeneous systems programming**, **real-time audio/signal telemetry ingestion**, and **hybrid quantum-classical execution loops**. 
+
+Traditional machine learning pipelines and quantum simulation algorithms often operate in isolated software stacks. This repository investigates how low-latency systems infrastructure (**C++20**) can seamlessly interface with robust enterprise coordination layers (**Java**) and flexible algorithmic reasoning engines (**Python / Qiskit**) to support:
+* **Hybrid Quantum Circuit Simulations:** Benchmarking variational algorithms and gate-level operations under simulated quantum noise profiles.
+* **Real-Time Signal Orchestration:** Processing high-frequency input streams through low-overhead native memory pipelines.
+* **Cognitive Agent Integration:** Bridging natural language parsing instructions with deterministic low-level system actions.
 
 ---
 
-### 🔬 Core Research Interests
+## 🏗️ System Architecture
 
-* **Prompt Engineering & Cognitive Architectures:** Systematic prompt optimization (DSPy), Chain-of-Thought (CoT) reasoning loops, multi-agent orchestration, and deterministic LLM evaluation benchmarks.
-* **Quantum Computing & Optimization:** Variational Quantum Eigensolvers (VQE), Quantum Approximate Optimization Algorithms (QAOA), and Quadratic Unconstrained Binary Optimization (QUBO) problem formulations.
-* **Signal Processing & Sensor Fusion:** Non-GPS dependent navigation, low-latency audio/magnetometer analysis, and real-time noise-resilient filtering under high RF noise constraints.
-* **High-Performance Infrastructure:** Distributed microservices, hardware-accelerated numerical solvers, and low-latency execution runtimes.
+The repository is structured into distinct, decoupled modular tiers communicating via structured relational persistence and RESTful endpoints:
 
----
 
-### 🧪 Key Research & Engineering Projects
+```
 
-#### 1. [AI-Quantum-Circuit-Engine](https://github.com/Manoj-pamidimukkkala/AI-Quantum-Circuit-Engine)
-*An advanced multi-tier engine integrating AI natural language processing, high-performance audio signal processing, system orchestration, and quantum circuit simulation capabilities.*
-* **Architecture:** Combines a high-performance C++20 low-latency signal engine (`audio_processor.cpp`) with a Java enterprise task coordinator (`SystemOrchestrator.java`) and a Python FastAPI quantum/NLP backend (`engine.py`).
-* **Implementation:** Features real-time state persistence (`schema.sql`) coupled with a responsive web HUD dashboard (`frontend-ui/`) for live execution monitoring.
-* **Stack:** C++20, Java, Python (FastAPI), Qiskit, SQL, HTML/CSS/JavaScript.
+┌────────────────────────┐       ┌────────────────────────┐       ┌────────────────────────┐
+│   C++20 Signal Core    │       │ Java Enterprise Engine │       │ Python AI & Quantum    │
+│  (audio_processor.cpp) │ <---> │ (SystemOrchestrator)   │ <---> │ Backend (FastAPI/Qiskit)│
+└────────────────────────┘       └────────────────────────┘       └────────────────────────┘
+▲                                                                 ▲
+└─────────────────────── [ State Persistence ] ───────────────────┘
+(schema.sql & frontend-ui/)
 
-#### 2. Adaptive Prompt Optimization & Evaluation Framework
-*Systematic prompt engineering pipeline focusing on semantic alignment, reduction of hallucinations, and structured JSON output validation.*
-* **Architecture:** Implements multi-agent and multi-stage reasoning workflows utilizing Chain-of-Thought (CoT), few-shot self-consistency, and ReAct agent loops.
-* **Evaluation:** Utilizes automated LLM-as-a-judge metrics and test-driven prompt iterations for domain-specific knowledge retrieval.
-* **Stack:** Python, LangChain, DSPy, OpenAI/Anthropic APIs, Pydantic.
+```
 
-#### 3. Agent-AI & Autonomous Workflow Orchestrator
-*Natural language instruction-driven execution engine designed to automate complex, multi-step tasks across system interfaces.*
-* **Architecture:** Parses conversational inputs into deterministic execution plans, managing state, tool dispatch, and automated error recovery.
-* **Implementation:** Built robust parsing logic to translate free-form user intents into structured API calls and script actions safely.
-* **Stack:** TypeScript, Python, Node.js, REST APIs.
-
-#### 4. Q-Sensing-NAV: Subsurface & Counter-Stealth Defense Engine
-*Quantum-enhanced target detection and environmental magnetic anomaly mapping for GPS-denied environments.*
-* **Architecture:** High-throughput numerical solvers modeling subtle field distortions under adversarial RF noise profiles.
-* **Implementation:** Designed real-time sensor ingestion algorithms capable of high-precision spatial state estimation.
-* **Stack:** Python, SciPy, Matplotlib, C++.
-
-#### 5. Quantum-Portfolio-Optimization-Risk-Engine
-*Hybrid quantum optimization platform for complex non-convex risk analysis.*
-* **Architecture:** Formulates combinatorial asset allocation problems into QUBO models resolved via hybrid QAOA/VQE routines.
-* **Implementation:** Distributed microservice backend ensuring deterministic risk calculation and scalability.
-* **Stack:** Java, Spring Boot, Python, REST APIs, Docker.
+1. **Native Ingestion Core (`audio_processor.cpp`):** Handles high-frequency signal processing and low-latency buffer management using modern C++20 features.
+2. **Enterprise Task Coordinator (`SystemOrchestrator.java`):** Manages job dispatching, concurrency states, and lifecycle rules across distributed sub-components.
+3. **Intelligence & Quantum Layer (`engine.py`):** Powered by FastAPI, this component drives natural language processing routines, prompt evaluation flows, and Qiskit-based quantum circuit execution.
+4. **Persistence & HUD (`schema.sql`, `frontend-ui/`):** Relational state schema coupled with a lightweight web dashboard for real-time execution monitoring.
 
 ---
 
-### 🛠️ Technical Stack
+## 🚀 Getting Started & Usage Guide
 
-| Category | Tools, Languages & Frameworks |
-| :--- | :--- |
-| **Languages & Systems** | Python, C++ (20/23), Java, TypeScript, SQL, Bash |
-| **AI & LLM Tooling** | Prompt Engineering (CoT, ReAct), DSPy, RAG Pipelines, PyTorch, LangChain, Agentic Workflows |
-| **Quantum Computing** | Qiskit, VQE, QAOA, QUBO Modeling, Circuit Simulation |
-| **Scientific & Math** | NumPy, SciPy, Eigen, Numerical Solvers, Statistical Modeling |
-| **Infrastructure & DevOps** | Docker, Git/GitHub, Linux, FastAPI, Spring Boot, CI/CD |
+### Prerequisites
+Ensure your environment has the following runtimes and tools installed:
+* **C++ Compiler:** Supporting C++20 (GCC 11+, Clang 13+, or MSVC 2022)
+* **Java SDK:** OpenJDK 17 or higher
+* **Python:** Version 3.11+ with `pip`
+* **Build Tools:** CMake, Make, and Docker
+
+### 1. Installation & Setup
+Clone the repository and initialize your workspace:
+```bash
+git clone [https://github.com/Manoj-pamidimukkkala/AI-Quantum-Circuit-Engine.git](https://github.com/Manoj-pamidimukkkala/AI-Quantum-Circuit-Engine.git)
+cd AI-Quantum-Circuit-Engine
+
+```
+
+### 2. Running Individual Modules
+
+#### Python AI & Quantum Backend
+
+Navigate to the Python environment and install dependencies:
+
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
+uvicorn engine:app --reload --port 8000
+
+```
+
+#### C++ Signal Processor Compilation
+
+Compile the high-performance native component:
+
+```bash
+mkdir build && cd build
+cmake -DCMAKE_BUILD_TYPE=Release ..
+make
+
+```
+
+#### Java Enterprise Orchestrator
+
+Build and run the Java task coordinator:
+
+```bash
+javac SystemOrchestrator.java
+java SystemOrchestrator
+
+```
+
+### 3. Containerized Deployment
+
+To spin up the multi-tier environment using Docker:
+
+```bash
+docker-compose up --build
+
+```
 
 ---
 
-### 📊 GitHub Diagnostics
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Manoj-pamidimukkkala&show_icons=true&theme=tokyonight&hide_border=true" width="48%" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Manoj-pamidimukkkala&layout=compact&theme=tokyonight&hide_border=true" width="48%" />
-</p>
+## 🛠️ Technology Stack
+
+| Component | Technologies & Frameworks |
+| --- | --- |
+| **Native Systems** | C++20, CMake, Eigen, Lock-free Buffers |
+| **Enterprise Core** | Java 17+, Spring Boot / Native Concurrency |
+| **AI & Quantum** | Python, FastAPI, Qiskit, PyTorch, LangChain, DSPy |
+| **Database & UI** | PostgreSQL / SQLite (`schema.sql`), HTML5, CSS3, JavaScript |
+| **DevOps** | Docker, Git, Linux Automation Scripts |
+
+---
+
+## 📄 License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+```
+
+```
